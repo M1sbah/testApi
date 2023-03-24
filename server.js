@@ -26,6 +26,13 @@ dotenv.config({
 
 connectDB();
 
+app.get('/',(req,res)=>{
+   res.status(200).json({
+        msg:"Success"
+   });
+});
+
+
 app.use('/api/todo/auth',require('./routes/user'));
 /*app.get('/todo',(req,res)=>{
    res.status(200).json({
