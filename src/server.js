@@ -1,7 +1,7 @@
 const express=require('express');
 const colors =require('colors');
 const morgan = require('morgan');
-const connectDB = require('./config/db');
+const connectDB = require('../config/db');
 const dotenv = require('dotenv');
 
 
@@ -33,7 +33,7 @@ app.get('/',(req,res)=>{
 });
 
 
-app.use('/api/todo/auth',require('./routes/user'));
+app.use('/api/todo/auth',require('../routes/user'));
 /*app.get('/todo',(req,res)=>{
    res.status(200).json({
         "name":"Misbah",
